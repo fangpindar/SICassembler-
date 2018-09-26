@@ -1,0 +1,25 @@
+1000        PRO      START   1000
+1000 001033 FIRST    LDA     ZERO
+1003 0C1042          STA     Ans
+1006 00103c          LDA     NUM1
+1009 0C1039          STA     Num
+100c 001042 F1       LDA     Ans
+100f 181039          ADD     Num
+1012 0C1042          STA     Ans
+1015 001039          LDA     Num
+1018 181036          ADD     TWO
+101b 28103f          COMP    NUM2
+101e 38100c          JLT     F1
+1021 001039          LDA     Num
+1024 181036          ADD     TWO
+1027 0C1039          STA     Num
+102a 001042          LDA     Ans
+102d 181039          ADD     Num
+1030 0C9042          STA     Ans,x
+1033 000000 ZERO     WORD    0
+1036 000002 TWO      WORD    2
+1039        Num      RESW    1
+103c 000014 NUM1     WORD    20
+103f 000030 NUM2     WORD    48
+1042        Ans      RESW    1
+1045                 END     FIRST
